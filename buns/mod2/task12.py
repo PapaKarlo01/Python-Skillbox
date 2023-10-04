@@ -1,0 +1,7 @@
+task = input()
+task = task.replace('-', '')
+task = task.replace(')', '')
+task = task.replace('(', '')
+task = task.replace(' ', '')
+print(task)
+input()
