@@ -37,5 +37,3 @@ elif(win('O', a)):
     print('O')
 else:
     print('Ничья')
-
-input()
