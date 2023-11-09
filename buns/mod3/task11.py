@@ -14,7 +14,7 @@ def transponing(matrix):
     return tMatrix
 
 
-def diagonal_check(matrix, sign):
+def main_diagonal_check(matrix, sign):
     j = 0
     for i in range(0, len(matrix)):
         if matrix[i][j] != sign:
@@ -23,10 +23,20 @@ def diagonal_check(matrix, sign):
     return True
 
 
+def second_diagonal_check(matrix, sign):
+    j = len(matrix) - 1
+    for i in range(0, len(matrix)):
+        if matrix[i][j] != sign:
+            return False
+        j -= 1
+    return True
+
+
 def win(sign, matrix):
     for i in range(len(matrix)):
         if (matrix[i].count(sign) == len(a) or
-                transponing(matrix)[i].count(sign) == len(a)) or diagonal_check(matrix, sign):
+                transponing(matrix)[i].count(sign) == len(a)) or main_diagonal_check(matrix, sign)\
+                or second_diagonal_check(matrix, sign):
             return True
     return False
 
