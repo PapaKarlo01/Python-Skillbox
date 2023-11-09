@@ -38,3 +38,4 @@ elif(win('O', a)):
 else:
     print('Ничья')
 
+input()
